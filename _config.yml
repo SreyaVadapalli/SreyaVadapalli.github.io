@@ -1,0 +1,15 @@
+# ===========================================================
+#  EDIT THIS FILE FIRST — it fills in your name & links
+#  everywhere on the site. After editing, save and push.
+# ===========================================================
+
+title:       Your Name
+tagline:     DPhil candidate · University of Somewhere
+email:       you@example.com
+github_user: yourusername
+cv_path:     /assets/files/CV.pdf
+description:  DPhil candidate researching [your topics]. Interests in X, Y, and Z.
+
+# --- Leave the settings below as they are ---
+markdown: kramdown
+permalink: pretty

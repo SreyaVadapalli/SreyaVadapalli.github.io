@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="author" content="{{ sreyavadapalli.title }}">
+  <meta name="description" content="{{ site.description }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+<div class="wrap">
+
+  <aside class="sidebar">
+    <img class="avatar" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of {{ site.title }}">
+
+    <div class="name">{{ site.title }}</div>
+    <div class="tagline">{{ site.tagline }}</div>
+
+    <div class="meta">
+      <div class="row">
+        <div class="label">Contact</div>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </div>
+      <div class="row">
+        <div class="label">GitHub</div>
+        <a href="https://github.com/{{ site.github_user }}" target="_blank" rel="noopener">{{ site.github_user }}</a>
+      </div>
+      <div class="row">
+        <div class="label">CV</div>
+        <a href="{{ site.cv_path | relative_url }}" target="_blank" rel="noopener">Curriculum Vitae</a>
+      </div>
+    </div>
+
+    {% assign u = page.url %}
+    <nav>
+      <a href="{{ '/' | relative_url }}"          class="{% if u == '/' %}active{% endif %}">Home</a>
+      <a href="{{ '/about-me/' | relative_url }}" class="{% if u contains 'about-me' %}active{% endif %}">About Me</a>
+      <a href="{{ '/research/' | relative_url }}" class="{% if u contains 'research' %}active{% endif %}">Research</a>
+      <a href="{{ '/teaching/' | relative_url }}" class="{% if u contains 'teaching' %}active{% endif %}">Teaching</a>
+    </nav>
+  </aside>
+
+  <main>
+    {{ content }}
+  </main>
+
+</div>
+</body>
+</html>
