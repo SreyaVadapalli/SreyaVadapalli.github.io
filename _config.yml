@@ -1,14 +1,9 @@
-# ===========================================================
-#  EDIT THIS FILE FIRST — it fills in your name & links
-#  everywhere on the site. After editing, save and push.
-# ===========================================================
-
-title:       Your Name
-tagline:     DPhil candidate · University of Somewhere
-email:       you@example.com
-github_user: yourusername
+title:       Sreya Vadapalli
+tagline:     Health Data Scientist & Public Health Researcher
+email:       sreya.vadapalli98@gmail.com
+github_user: SreyaVadapalli
 cv_path:     /assets/files/CV.pdf
-description:  DPhil candidate researching [your topics]. Interests in X, Y, and Z.
+description:  Health Data Scientist & Public Health Researcher. Interests in X, Y, and Z.
 
 # --- Leave the settings below as they are ---
 markdown: kramdown
