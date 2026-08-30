@@ -6,6 +6,5 @@ cv_path:     /assets/files/Vadapalli_Sreya_Resume.pdf
 
 description:  Health Data Scientist & Public Health Researcher. Interests in X, Y, and Z.
 
-# --- Leave the settings below as they are ---
 markdown: kramdown
 permalink: pretty
