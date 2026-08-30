@@ -14,9 +14,10 @@
 </head>
 <body>
 
-  {% assign u = page.url %}
+    {% assign u = page.url %}
   <header class="topnav">
     <div class="topnav-inner">
+      <a href="{{ '/' | relative_url }}" class="brand">{{ site.title }}</a>
       <nav>
         <a href="{{ '/' | relative_url }}"                  class="{% if u == '/' %}active{% endif %}">Home</a>
         <a href="{{ '/about-me/' | relative_url }}"          class="{% if u contains 'about-me' %}active{% endif %}">About Me</a>
