@@ -187,7 +187,7 @@ ul.clean li:last-child{ border-bottom:none; }
 }
 .home-gallery img{
   width:100%;
-  aspect-ratio:4/5;
+  aspect-ratio:3/4;;
   object-fit:cover;
   border-radius:12px;
   box-shadow:0 4px 14px rgba(0,0,0,.08);
