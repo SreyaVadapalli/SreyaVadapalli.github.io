@@ -1,0 +1,69 @@
+---
+layout: default
+title: Exploratory Analysis of Poverty in NYC
+permalink: /projects/poverty-nyc/
+---
+
+<div class="eyebrow"><a href="{{ '/academic-projects/' | relative_url }}">← Projects</a></div>
+<h1>Exploratory Analysis of Poverty in NYC</h1>
+<div class="item-meta">Python · scikit-learn · imbalanced-learn · Social-determinants analytics</div>
+
+<p class="lead">
+  A machine-learning study of which socio-economic factors most shape poverty status in New
+  York City, using the NYCgov Poverty Measure data — with a focus on reliably identifying the
+  people most at risk, not just maximizing overall accuracy.
+</p>
+
+<p>
+  Poverty is a foundational social determinant of health, and knowing what drives it is a first
+  step toward targeting support effectively. Using ~68,000 records from NYC Open Data, this
+  project builds classifiers to predict whether an individual is in poverty and, more
+  importantly, surfaces which factors matter most.
+</p>
+
+<h2>Approach</h2>
+<ul class="clean">
+  <li>
+    <div class="item-title">Consensus feature selection</div>
+    <div class="item-meta">Rather than hand-picking predictors, features were selected by consensus across two independent techniques — correlation and mutual information — after removing identifiers and leakage-prone columns. This yielded 10 features spanning work, education, household, and language.</div>
+  </li>
+  <li>
+    <div class="item-title">Handling class imbalance</div>
+    <div class="item-meta">Only ~18% of the sample is in poverty, so a naive model can score high accuracy while missing most at-risk people. Compared SMOTE, random oversampling, and random undersampling, and evaluated on recall and F1 — not accuracy alone.</div>
+  </li>
+  <li>
+    <div class="item-title">Model comparison</div>
+    <div class="item-meta">Naive Bayes, Decision Tree, and Logistic Regression, each across all four resampling strategies, with min-max normalization.</div>
+  </li>
+</ul>
+
+<h2>Key findings</h2>
+<p>
+  <strong>Resampling was decisive.</strong> Without it, Logistic Regression reached 84%
+  accuracy but only 0.28 recall — missing nearly three-quarters of people actually in poverty.
+  With resampling, recall rose to ~0.76, correctly identifying most at-risk individuals. This is
+  the core lesson: on imbalanced social data, accuracy is misleading, and optimizing to
+  <em>catch the vulnerable minority</em> matters more.
+</p>
+<p>
+  <strong>Logistic Regression with resampling</strong> gave the best balance (F1 ≈ 0.52,
+  recall ≈ 0.76), and the choice of resampling method made little difference. <strong>Work
+  (hours and employment) and education</strong> were the strongest drivers of poverty status,
+  while demographics like age and borough carried little signal.
+</p>
+
+<h2>Why it matters</h2>
+<p>
+  Framed for equity: in a public-health or policy context, failing to identify someone in need
+  (a false negative) is costlier than a false alarm — so a model tuned for recall better serves
+  the goal of reaching vulnerable populations. The analysis points toward employment and
+  education as leverage points for anti-poverty policy.
+</p>
+
+<p class="item-meta">
+  Team project for Analytics, Rutgers MBS · Data: NYCgov Poverty Measure, NYC Open Data
+</p>
+
+<p>
+  <a class="btn" href="GITHUB_LINK_HERE" target="_blank" rel="noopener">View on GitHub</a>
+</p>
