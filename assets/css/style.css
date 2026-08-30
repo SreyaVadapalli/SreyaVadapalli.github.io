@@ -182,8 +182,8 @@ ul.clean li:last-child{ border-bottom:none; }
 .home-gallery{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
-  gap:14px;
-  margin:28px 0;
+  gap:24px;
+  margin:32px 0;
 }
 .home-gallery img{
   width:100%;
