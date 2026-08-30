@@ -195,3 +195,11 @@ ul.clean li:last-child{ border-bottom:none; }
 @media (max-width:600px){
   .home-gallery{ grid-template-columns:1fr; }
 }
+
+.home-gallery figure{ margin:0; }
+.home-gallery figcaption{
+  margin-top:8px;
+  font-size:.8rem;
+  color:var(--muted);
+  text-align:center;
+}
