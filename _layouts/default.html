@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="author" content="{{ sreyavadapalli.title }}">
+  <meta name="author" content="{{ site.title }}">
   <meta name="description" content="{{ site.description }}">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,48 +13,35 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-<div class="wrap">
 
-  <aside class="sidebar">
-    <img class="avatar" src="{{ '/assets/images/Profile.jpeg' | relative_url }}" alt="Portrait of {{ site.title }}">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <img class="avatar" src="{{ '/assets/images/Profile.jpeg' | relative_url }}" alt="Portrait of {{ site.title }}">
+      <div class="ident">
+        <div class="name">{{ site.title }}</div>
+        <div class="tagline">{{ site.tagline }}</div>
+      </div>
 
-    <div class="name">{{ site.title }}</div>
-    <div class="tagline">{{ site.tagline }}</div>
+      {% assign u = page.url %}
+      <nav>
+        <a href="{{ '/' | relative_url }}"                 class="{% if u == '/' %}active{% endif %}">Home</a>
+        <a href="{{ '/about-me/' | relative_url }}"         class="{% if u contains 'about-me' %}active{% endif %}">About Me</a>
+        <a href="{{ '/research/' | relative_url }}"         class="{% if u contains 'research' %}active{% endif %}">Research</a>
+        <a href="{{ '/academic-projects/' | relative_url }}" class="{% if u contains 'academic-projects' %}active{% endif %}">Academic Projects</a>
+      </nav>
 
-    <div class="meta">
-      <div class="row">
-        <div class="label">Contact</div>
+      <div class="contact-strip">
         <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-      </div>
-      <div class="row">
-        <div class="label">GitHub</div>
-        <a href="https://github.com/{{ site.github_user }}" target="_blank" rel="noopener">{{ site.github_user }}</a>
-      </div>
-
-      <div class="row">
-        <div class="label">LinkedIn</div>
-        <a href="https://www.linkedin.com/in/{{ site.linkedin_user }}" target="_blank" rel="noopener">{{ site.linkedin_user }}</a>
-      </div>
-      
-      <div class="row">
-        <div class="label">CV</div>
-        <a href="{{ site.cv_path | relative_url }}" target="_blank" rel="noopener">Curriculum Vitae</a>
+        <a href="https://github.com/{{ site.github_user }}" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/{{ site.linkedin_user }}" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="{{ site.cv_path | relative_url }}" target="_blank" rel="noopener">CV</a>
       </div>
     </div>
-
-    {% assign u = page.url %}
-    <nav>
-      <a href="{{ '/' | relative_url }}"          class="{% if u == '/' %}active{% endif %}">Home</a>
-      <a href="{{ '/about-me/' | relative_url }}" class="{% if u contains 'about-me' %}active{% endif %}">About Me</a>
-      <a href="{{ '/research/' | relative_url }}" class="{% if u contains 'research' %}active{% endif %}">Research</a>
-      <a href="{{ '/academic-projects/' | relative_url }}" class="{% if u contains 'academic-projects' %}active{% endif %}">Academic Projects</a>
-    </nav>
-  </aside>
+  </header>
 
   <main>
     {{ content }}
   </main>
 
-</div>
 </body>
 </html>
