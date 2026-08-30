@@ -1,0 +1,72 @@
+---
+layout: default
+title: Survival Analysis
+permalink: /projects/survival-analysis/
+---
+
+<div class="eyebrow"><a href="{{ '/academic-projects/' | relative_url }}">← Academic Projects</a></div>
+<h1>Survival Analysis of Lung Cancer Data</h1>
+<div class="item-meta">R · Python · Clinical time-to-event modeling</div>
+
+<p class="lead">
+  A comprehensive survival analysis spanning 12 time-to-event models — from classical
+  non-parametric estimators through to deep learning — on the NCCTG lung cancer clinical
+  trial dataset.
+</p>
+
+<p>
+  Time-to-event analysis is central to clinical and health-outcomes research: it answers not
+  just <em>whether</em> an event happens, but <em>when</em>, while correctly handling censored
+  patients who leave the study before the event. I built this project to work through the full
+  spectrum of survival methods used in clinical data science, in both R and Python, and to
+  understand how classical statistical approaches and machine-learning approaches compare on
+  the same clinical data.
+</p>
+
+<h2>Dataset</h2>
+<p>
+  The NCCTG Lung Cancer dataset — 228 patients with advanced lung cancer from the North
+  Central Cancer Treatment Group trial, with clinically meaningful covariates including ECOG
+  and Karnofsky performance scores, age, sex, weight loss, and caloric intake.
+</p>
+
+<h2>Methods covered</h2>
+<p>
+  The project moves deliberately across the methodological spectrum rather than fitting a
+  single model:
+</p>
+<ul class="clean">
+  <li>
+    <div class="item-title">Non-parametric</div>
+    <div class="item-meta">Kaplan–Meier estimator, Nelson–Aalen estimator, log-rank test</div>
+  </li>
+  <li>
+    <div class="item-title">Semi-parametric</div>
+    <div class="item-meta">Cox proportional hazards, stratified Cox, time-varying covariates, frailty models</div>
+  </li>
+  <li>
+    <div class="item-title">Parametric</div>
+    <div class="item-meta">Accelerated failure time (AFT) models via flexsurv</div>
+  </li>
+  <li>
+    <div class="item-title">Machine learning &amp; deep learning</div>
+    <div class="item-meta">Random Survival Forests, gradient-boosted survival models, and DeepSurv (pycox)</div>
+  </li>
+  <li>
+    <div class="item-title">Model comparison</div>
+    <div class="item-meta">Prediction-error benchmarking across all approaches with the pec package</div>
+  </li>
+</ul>
+
+<h2>Why it matters</h2>
+<p>
+  Survival analysis is the statistical backbone of clinical trials and epidemiology, and the
+  classical methods (Kaplan–Meier, Cox) remain the language of medical research — while newer
+  ML and deep-learning approaches offer flexibility for complex, high-dimensional data. Working
+  across both, in R and Python, reflects the toolkit needed to move between a biostatistics and
+  a machine-learning setting.
+</p>
+
+<p>
+  <a class="btn" href="https://github.com/SreyaVadapalli/Survival_Analysis" target="_blank" rel="noopener">View on GitHub</a>
+</p>
