@@ -250,3 +250,23 @@ ul.clean li:last-child{ border-bottom:none; }
   text-transform:uppercase; letter-spacing:.05em; margin:3px 0 10px;
 }
 .tl-card p{ font-size:.9rem; margin:0; line-height:1.55; }
+
+.mini-table{
+  width:100%;
+  border-collapse:collapse;
+  margin:16px 0;
+  font-size:.9rem;
+}
+.mini-table th, .mini-table td{
+  text-align:left;
+  padding:10px 14px;
+  border-bottom:1px solid var(--line);
+}
+.mini-table th{
+  font-weight:600;
+  color:var(--muted);
+  font-size:.82rem;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+.mini-table td:first-child{ font-weight:500; }
